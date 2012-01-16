@@ -1,0 +1,5 @@
+This repository contains the list of installed packages among different editions of Linux Mint.
+
+These comparisons are a guide on what to keep and what to cut when transforming LMDE into Swift Linux.
+
+To obtain the package list, boot up the ISO file and enter the command "dpkg-query -W -f='${Package}\n' > list.txt"
