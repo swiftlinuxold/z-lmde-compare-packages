@@ -30,11 +30,17 @@ only_mint9_gnome = mint9_gnome - mint9_lxde - mint9_fluxbox
 to_plist (only_mint9_gnome, 'only_mint9_gnome.txt')
 
 mint9_gnome_not_lxde = mint9_gnome - mint9_lxde
-to_plist (mint9_gnome_not_lxde, 'mint9_gnome_not_lxde.txt')
+to_plist (mint9_gnome_not_lxde, 'mint9_gnome_not_lxde.txt') 
 
 mint9_gnome_not_fluxbox = mint9_gnome - mint9_fluxbox
 to_plist (mint9_gnome_not_fluxbox, 'mint9_gnome_not_fluxbox.txt')
 
-gnome_lmde_not_mint9 = lmde_gnome - mint9_gnome
-to_plist (gnome_lmde_not_mint9, 'gnome_lmde_not_mint9.txt')
+lmde_not_lxde = lmde_gnome.intersection(mint9_gnome_not_lxde)
+to_plist (lmde_not_lxde, 'lmde_not_lxde.txt')
+
+lmde_not_fluxbox = lmde_gnome.intersection(mint9_gnome_not_fluxbox)
+to_plist (lmde_not_fluxbox, 'lmde_not_fluxbox.txt')
+
+# gnome_lmde_not_mint9 = lmde_gnome - mint9_gnome
+# to_plist (gnome_lmde_not_mint9, 'gnome_lmde_not_mint9.txt')
 
