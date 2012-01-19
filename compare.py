@@ -41,6 +41,8 @@ to_plist (lmde_not_lxde, 'lmde_not_lxde.txt')
 lmde_not_fluxbox = lmde_gnome.intersection(mint9_gnome_not_fluxbox)
 to_plist (lmde_not_fluxbox, 'lmde_not_fluxbox.txt')
 
-# gnome_lmde_not_mint9 = lmde_gnome - mint9_gnome
-# to_plist (gnome_lmde_not_mint9, 'gnome_lmde_not_mint9.txt')
+antix11 = plist('input/antix11.txt')
+mepis11 = plist('input/mepis11.txt')
 
+mepis_not_antix = mepis11 - antix11
+to_plist (mepis_not_antix, 'mepis_not_antix.txt')
