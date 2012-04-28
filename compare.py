@@ -13,8 +13,8 @@ def to_plist (plist1, file1):
     file.close()
         
 
-lmde_gnome = plist('input/lmde-gnome.txt')
-lmde_xfce = plist('input/lmde-xfce.txt')
+lmde_gnome = plist('input/lmde-201204-gnome.txt')
+lmde_xfce = plist('input/lmde-201204-xfce.txt')
 
 only_lmde_gnome = lmde_gnome - lmde_xfce
 to_plist (only_lmde_gnome, 'only_lmde_gnome.txt')
@@ -46,3 +46,6 @@ mepis11 = plist('input/mepis11.txt')
 
 mepis_not_antix = mepis11 - antix11
 to_plist (mepis_not_antix, 'mepis_not_antix.txt')
+
+antix_not_mepis = antix11 - mepis11
+to_plist (antix_not_mepis, 'antix_not_mepis.txt')
